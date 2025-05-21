@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Guide of Bengaluru</title>
+</head>
+
+<body style="background-color:#F0FFF0;">
+    <h1>Welcome to Bengaluru</h1>
+    <p>
+        🌆 Bengaluru — Where Tech Meets Tradition! 🚀🌿
+        <br>
+
+        India’s Silicon Valley, Bengaluru is a dynamic blend of innovation, heritage, and energy. Known for its thriving IT industry, startup culture, and lush green spaces, the city is home to dreamers, coders, artists, and entrepreneurs alike.
+        <br>
+        With a pleasant climate year-round, a buzzing café scene ☕, legendary traffic 🚗😅, and rich cultural roots in Kannada traditions, Bengaluru is as laid-back as it is fast-paced.
+        <br>
+        From Namma Metro to Nandi Hills, filter coffee to future tech, this city has a vibe for everyone.
+
+    </p>
+    <img src="bengaluru.jpg" alt="Bengaluru City" width="500">
+    <h2>Top Places to visit in Bengaluru</h2>
+        <ul>
+            <h5>
+                <font size = "3">
+            <li>Vidhan Soudha</li>
+            <li>Cubbon Park</li>
+            <li>Lalbagh Garden</li>
+            <li>Banneghatta National Park</li>
+            <li>Golf course road</li>
+            <li>Tennis Pavillion(Palace ground)</li>
+            </font>
+            </h5>
+        </ul>
+    <h2>Famous Foods</h2>
+        <ul>
+            <h5>
+                <font size = "3">
+          <li>Masala Dosa</li>
+          <li>Idli Vada</li>
+          <li>Filter Coffee/Hot Tea</li>
+          <li>Holige</li>
+          </font>
+            </h5>
+          </h5>
+        </ul>
+    
+        <button 
+            onclick="location.href='registration.html'" 
+            style="font-size: 24px; padding: 15px 30px; position: absolute; right: 20px; top: 20px;">
+            Registration
+        </button>
+        <button id="toggleBtn">Go to Table Page</button>
+
+            <script>
+                const btn = document.getElementById('toggleBtn');
+
+                btn.addEventListener('click', () => {
+                const currentPage = window.location.pathname.split('/').pop();
+
+                    if (currentPage === 'hometown.html') {
+                      window.location.href = 'table.html';
+                    } else if (currentPage === 'table.html') {
+                          window.location.href = 'hometown.html';
+                    }
+  });
+</script>
+</body>
+</html>

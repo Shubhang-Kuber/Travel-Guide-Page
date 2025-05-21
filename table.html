@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Data</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #333;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registered Data</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody id="data-body">
+      <!-- Data rows go here -->
+    </tbody>
+  </table>
+
+  <script>
+    // Retrieve stored registrations from localStorage
+    const registrations = JSON.parse(localStorage.getItem('registrations')) || [];
+
+    const tbody = document.getElementById('data-body');
+
+    if (registrations.length > 0) {
+      registrations.forEach(({ name, email, age }) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${name}</td>
+          <td>${email}</td>
+          <td>${age}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    } else {
+      // If no data, display a message below the table
+      const message = document.createElement('p');
+      message.textContent = 'No registration data found.';
+      document.body.appendChild(message);
+    }
+  </script>
+</body>
+</html>

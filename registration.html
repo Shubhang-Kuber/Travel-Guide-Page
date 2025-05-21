@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registration</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #FFE4E1, #FFB6C1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .registration-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(255, 126, 95, 0.4);
+    width: 360px;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    color: #ff6f61;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus {
+    border-color: #feb47b;
+    outline: none;
+    box-shadow: 0 0 8px #feb47b;
+  }
+
+  button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #feb47b;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+  <div class="registration-container">
+    <h2>Register Here</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label for="branch">Branch</label>
+      <select id="branch" name="branch" required>
+        <option value="" disabled selected>Select your branch</option>
+        <option value="ISE">ISE</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="CV">CV</option>
+        <option value="EEE">EEE</option>
+        <option value="BT">BT</option>
+        <option value="CHE">CHE</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
